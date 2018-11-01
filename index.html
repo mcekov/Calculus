@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <title>Calculus</title>
+  <link rel='icon' type='image/x-icon' href='favicon.ico' />
+
+  <!-- CSS  -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="screen,projection" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
+    <div class="container">
+      <a class="navbar-brand" href="#">World Logistic Bulgaria</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+
+          <a class="nav-item nav-link active" href="#">Calculator</a>
+          <a class="nav-item nav-link" href="faq.html">FAQ</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mb-5">
+
+    <!-- Notifications -->
+    <div id="notifications">
+      <div id="infoBox" class="notification">
+        <span>Info</span>
+      </div>
+
+      <div id="errorBox" class="alert alert-danger" role="alert">
+        <span>Error</span>
+      </div>
+
+    </div>
+    <!-- Debug Info -->
+    <div id="debugInfo" class="mb-5"></div>
+    <!-- Debug Info End -->
+
+    <!-- 9AM BG EXPORT-->
+    <div class="card mb-3 animated fadeIn">
+      <form action="#" id="calcForm">
+        <div class="card-header bg-primary text-white">
+          <div class="row">
+            <div class="col-3">
+
+              <select name="tariff" class="form-control form-control-sm bg-primary text-white" id="inputGroupSelect01">
+                <option value="9am-bg-export">9AM BG EXPORT</option>
+                <option value="10am-bg-export">10AM BG EXPORT</option>
+                <option value="12am-bg-export">12AM BG EXPORT</option>
+                <option value="express-bg-export">EXPRESS BG EXPORT</option>
+                <option value="9am-bg-import">9AM BG IMPORT</option>
+                <option value="12am-eco-bg-export">12AM ECO BG EXPORT</option>
+                <option value="eco-express-bg-export">ECO EXPRESS BG EXPORT</option>
+                <option value="eco-express-bg-import">ECO EXPRESS BG IMPORT</option>
+              </select>
+
+            </div>
+            <div class="col-sm">
+              <a href="#" class="badge badge-warning help-popup" data-toggle="popover" data-trigger="focus"
+                data-content="Избиране на тарифа">?</a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body bg-light">
+          <!-- <form action="#" id="calcForm"> -->
+          <div class="row">
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="countrySelect">Държава</label>
+                <select class="form-control" id="countrySelect" name="zone"></select>
+              </div>
+            </div>
+
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="discount">Физическо тегло</label>
+                <input type="number" name="weight" id="weight" class="form-control" placeholder="1.0кг" step="0.01">
+              </div>
+            </div>
+
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="fuelTax">Tакса гориво в %</label>
+                <input type="number" name="fuelTax" id="fuelTax" class="form-control" placeholder="18.0%" step="0.01">
+              </div>
+            </div>
+
+            <div class="col-sm">
+              <div class="form-group">
+                <label for="discount">Отстъпка %</label>
+                <input type="number" name="discount" id="discount" class="form-control" placeholder="0.0%" step="0.01">
+              </div>
+            </div>
+          </div>
+
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Държава</th>
+                <th scope="col">Зона</th>
+                <th scope="col">Цена/основа</th>
+                <th scope="col">Такса гориво</th>
+                <th scope="col">Отстъпка</th>
+                <th scope="col">Тотал</th>
+              </tr>
+            </thead>
+            <tbody id="resultsTable">
+              <tr></tr>
+            </tbody>
+          </table>
+
+          <button type="submit" class="btn btn-primary" id="submitBtn">Изчисли</button>
+          <a href="index.html" class="btn btn-danger">Изтрии</a>
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer font-small text-white">
+    <div class="container">
+      <!-- Copyright -->
+      <div class="text-muted text-center">© 2018 Copyright: World Logistic Bulgaria |
+        <span>ver. 0.9.1 (beta)</span>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+  <!--  Scripts -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/service.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
