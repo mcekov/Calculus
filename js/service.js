@@ -2633,7 +2633,7 @@ let service = (() => {
           range40: 0
         }
       };
-    } else if (tariff === '9am-bg-import') {
+    } else if (tariff === 'express-bg-import') {
       data = {
         1: {
           range0: 0,
