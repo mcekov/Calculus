@@ -19,7 +19,7 @@
 }
 
 #infoBox > span {
-  background: #393;
+  background: rgb(68, 158, 68);
   display: none;
 }
 /* #errorBox > span {
@@ -32,10 +32,12 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
 }
+
 .page-footer {
   position: absolute;
   bottom: 0;
