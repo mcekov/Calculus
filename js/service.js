@@ -4208,10 +4208,10 @@ let service = (() => {
     if (weight > 30) {
       let extraWeigth = (weight - 30) * dataPrices[zone]['range40'];
 
-      return extraWeigth + dataPrices[zone]['range39'];
+      return (extraWeigth + dataPrices[zone]['range39']).toFixed(2);
     }
 
-    return dataPrices[zone][range];
+    return (dataPrices[zone][range].toFixed(2));
   }
 
   function getRange(weight) {
@@ -4326,6 +4326,10 @@ let service = (() => {
     });
 
     $('#resultsTable').append(`<tr class="animated bounceInLeft">${html}</tr>`);
+  }
+
+  function round(value, decimals) {
+    return Number(Math.round(value+'e'+decimals)+'e-'+decimals);
   }
 
   return {
