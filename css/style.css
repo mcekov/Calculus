@@ -61,3 +61,15 @@ body {
   position: relative;
   left: -20px;
 }
+
+select option:hover {
+  color: #000;
+  box-shadow: inset 20px 20px rgb(119, 20, 61);
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #f47c3c;
+}
