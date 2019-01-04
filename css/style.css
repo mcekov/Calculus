@@ -73,3 +73,12 @@ select option:hover {
   color: #ffffff;
   background-color: #f47c3c;
 }
+
+.navbar-brand img {
+  width: 50px;
+  left: 15px;
+}
+
+.navbar-brand span {
+  margin-left: 10px;
+}

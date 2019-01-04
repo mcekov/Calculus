@@ -1045,13 +1045,15 @@ let service = (() => {
 
     // Get countries data
     for (const countryData of data.countries) {
-      let country = countryData.country;
-      let zone = countryData.zone;
+      const country = countryData.country;
+      const zone = countryData.zone;
 
-      let option = document.createElement('option');
+      if (zone) {
+      const option = document.createElement('option');
       option.value = zone;
       option.text = `${country}`;
       document.getElementById('countrySelect').appendChild(option);
+      }
     }
 
     // Debug Info
@@ -2636,90 +2638,90 @@ let service = (() => {
     } else if (tariff === 'express-bg-import') {
       data = {
         1: {
-          range0: 0,
-          range1: 0,
-          range2: 0,
-          range3: 0,
-          range4: 0,
-          range5: 0,
-          range6: 0,
-          range7: 0,
-          range8: 0,
-          range9: 0,
-          range10: 0,
-          range11: 0,
-          range12: 0,
-          range13: 0,
-          range14: 0,
-          range15: 0,
-          range16: 0,
-          range17: 0,
-          range18: 0,
-          range19: 0,
-          range20: 0,
-          range21: 0,
-          range22: 0,
-          range23: 0,
-          range24: 0,
-          range25: 0,
-          range26: 0,
-          range27: 0,
-          range28: 0,
-          range29: 0,
-          range30: 0,
-          range31: 0,
-          range32: 0,
-          range33: 0,
-          range34: 0,
-          range35: 0,
-          range36: 0,
-          range37: 0,
-          range38: 0,
-          range39: 0,
-          range40: 0
+          range0: 84.87,
+          range1: 107.15,
+          range2: 119.88,
+          range3: 132.61,
+          range4: 145.34,
+          range5: 158.07,
+          range6: 170.80,
+          range7: 183.53,
+          range8: 196.26,
+          range9: 208.99,
+          range10: 215.36,
+          range11: 221.73,
+          range12: 228.10,
+          range13: 234.47,
+          range14: 240.84,
+          range15: 247.21,
+          range16: 253.58,
+          range17: 289.95,
+          range18: 266.32,
+          range19: 272.69,
+          range20: 285.42,
+          range21: 298.15,
+          range22: 310.88,
+          range23: 323.61,
+          range24: 336.34,
+          range25: 349.07,
+          range26: 361.80,
+          range27: 374.53,
+          range28: 387.26,
+          range29: 399.99,
+          range30: 412.72,
+          range31: 425.45,
+          range32: 438.18,
+          range33: 450.91,
+          range34: 463.64,
+          range35: 476.37,
+          range36: 489.10,
+          range37: 501.83,
+          range38: 514.56,
+          range39: 527.29,
+          range40: 09.02,
         },
         2: {
-          range0: 0,
-          range1: 0,
-          range2: 0,
-          range3: 0,
-          range4: 0,
-          range5: 0,
-          range6: 0,
-          range7: 0,
-          range8: 0,
-          range9: 0,
-          range10: 0,
-          range11: 0,
-          range12: 0,
-          range13: 0,
-          range14: 0,
-          range15: 0,
-          range16: 0,
-          range17: 0,
-          range18: 0,
-          range19: 0,
-          range20: 0,
-          range21: 0,
-          range22: 0,
-          range23: 0,
-          range24: 0,
-          range25: 0,
-          range26: 0,
-          range27: 0,
-          range28: 0,
-          range29: 0,
-          range30: 0,
-          range31: 0,
-          range32: 0,
-          range33: 0,
-          range34: 0,
-          range35: 0,
-          range36: 0,
-          range37: 0,
-          range38: 0,
-          range39: 0,
-          range40: 0
+          range0: 88.58,
+          range1: 113.61,
+          range2: 128.03,
+          range3: 142.45,
+          range4: 156.87,
+          range5: 171.29,
+          range6: 185.71,
+          range7: 200.13,
+          range8: 214.55,
+          range9: 228.97,
+          range10: 236.40,
+          range11: 243.83,
+          range12: 251.26,
+          range13: 258.69,
+          range14: 266.12,
+          range15: 273.55,
+          range16: 280.98,
+          range17: 288.41,
+          range18: 295.84,
+          range19: 303.27,
+          range20: 318.12,
+          range21: 332.97,
+          range22: 347.82,
+          range23: 362.67,
+          range24: 377.52,
+          range25: 392.37,
+          range26: 407.22,
+          range27: 422.07,
+          range28: 436.92,
+          range29: 451.77,
+          range30: 466.62,
+          range31: 481.47,
+          range32: 496.32,
+          range33: 511.17,
+          range34: 526.02,
+          range35: 540.87,
+          range36: 555.72,
+          range37: 570.57,
+          range38: 585.42,
+          range39: 600.27,
+          range40: 11.67
         },
         3: {
           range0: 0,
@@ -4203,10 +4205,6 @@ let service = (() => {
 
     const dataPrices = createPricesObj(tariff);
 
-    if (!zone) {
-      showError('Country dosent exist in database!');
-    }
-
     if (weight > 30) {
       let extraWeigth = (weight - 30) * dataPrices[zone]['range40'];
 
@@ -4291,13 +4289,13 @@ let service = (() => {
 
     const calcForm = getFormData($('#calcForm'));
     const country = $('#countrySelect option:selected').text();
-
-    if (calcForm.weight <= 0) {
-      showError('Please input valid weight');
-      return;
-    }
-
     let zone = Number(calcForm.zone);
+
+    if (!zone ) {
+      showError('Country dosent exist in database!');
+    } else  if (calcForm.weight <= 0) {
+      showError('Please input valid weight');
+    } else {
     let price = getPrice(calcForm.weight, zone, calcForm.tariff);
 
     // Tax Fuel
@@ -4317,6 +4315,7 @@ let service = (() => {
       discount,
       totalResult
     ]);
+    }
   }
 
   function createResult(data) {
