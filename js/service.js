@@ -4612,9 +4612,13 @@ let service = (() => {
     const zone = Number(calcForm.zone);
 
     if (!zone ) {
-      showError('Country dosent exist in database!');
+      showError('Country does not exist in database!');
     } else  if (calcForm.weight <= 0) {
-      showError('Please input valid weight');
+      showError('Please Enter Valid Weight!');
+    } else  if (calcForm.fuelTax <= 0) {
+      showError('Please Enter Valid Fuel Tax!');
+    } else if (calcForm.discount <= 0){
+      showError('Please Enter Valid Weight!');
     } else {
     let price = getPrice(calcForm.weight, zone, calcForm.tariff);
 

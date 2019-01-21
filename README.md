@@ -1,6 +1,6 @@
-# calculus
+# Calculus Calculator App
 
-Calculator for courier services prices
+Calculator for courier service prices.
 
 Installation:
 
