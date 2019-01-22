@@ -4608,6 +4608,8 @@ let service = (() => {
     ev.preventDefault();
 
     const calcForm = getFormData($('#calcForm'));
+    console.log(calcForm.weight);
+    
     const country = $('#countrySelect option:selected').text();
     const zone = Number(calcForm.zone);
 
@@ -4617,7 +4619,7 @@ let service = (() => {
       showError('Please Enter Valid Weight!');
     } else  if (calcForm.fuelTax <= 0) {
       showError('Please Enter Valid Fuel Tax!');
-    } else if (calcForm.discount <= 0){
+    } else if (calcForm.discount < 0){
       showError('Please Enter Valid Weight!');
     } else {
     let price = getPrice(calcForm.weight, zone, calcForm.tariff);
