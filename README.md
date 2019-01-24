@@ -1,4 +1,4 @@
-# Calculus Calculator App
+# Calculus App
 
 ## Calculator for courier service prices.
 
