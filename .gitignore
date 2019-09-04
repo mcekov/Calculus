@@ -1,1 +1,2 @@
 git reset .vscode/launch.json
+node_modules

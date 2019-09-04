@@ -1,0 +1,80 @@
+/* Custom Stylesheet */
+/* #notifications {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  margin: 1em;
+} */
+
+.navbar-brand img {
+  width: 50px;
+  left: 15px;
+}
+
+.navbar-brand span {
+  margin-left: 10px;
+}
+
+#errorBox {
+  display: none;
+}
+
+.notification > span {
+  display: inline-block;
+  padding: 0.5em 2em 0.5em 2em;
+  border-radius: 10px;
+}
+
+#infoBox > span {
+  background: rgb(68, 158, 68);
+  display: none;
+}
+/* #errorBox > span {
+  background: #dc3545;
+} */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.page-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+.page-footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.help-popup {
+  position: relative;
+  left: -20px;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #f47c3c;
+  border-radius: 0;
+}

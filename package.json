@@ -1,0 +1,48 @@
+{
+  "name": "calculus",
+  "version": "0.9.1",
+  "description": "Tax Calculator",
+  "main": "index.js",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-core": "^6.26.3",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "uglifyify": "^5.0.2",
+    "watchify": "^3.11.1"
+  },
+  "scripts": {
+    "build": "browserify -g uglifyify ./js/main.js > ./dist/bundle.js",
+    "watch": "watchify ./js/main.js -o bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcekov/calculus.git"
+  },
+  "keywords": [
+    "calculator",
+    "tax",
+    "bootstrap",
+    "4",
+    "babel"
+  ],
+  "author": "M. Tsekov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mcekov/calculus/issues"
+  },
+  "homepage": "https://github.com/mcekov/calculus#readme",
+  "browserslist": "> 0.25%, not dead",
+  "transform": [
+    [
+      "babelify",
+      {
+        "comments": false
+      }
+    ]
+  ]
+}
